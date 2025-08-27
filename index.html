@@ -13,7 +13,7 @@
 <!--  -->
 </head>
 <body class="bg-[#F5FFF6] h-[180vh] h-auto w-[1140px] w-auto">
-    <header class="bg-white h-[9vh] ">
+    <header class="bg-white h-[8vh] ">
         <div class=" flex justify-between items-center">
             <div class="flex justify-between items-center pl-10">
                 <img class="w-[50px] h-[50px]" src="./assets/logo.png" alt="" srcset="">
@@ -22,7 +22,7 @@
             <div class="flex pr-10">
                  
                 <div class=" space-x-2 bg-[#F5FFF6] px-4 py-2 rounded-full flex items-center">
-                    <h2>0</h2>
+                    <h2 id="fav-count">0</h2>
                     <img class="w-[30px] h-[30px] ml-3" src="./assets/heart.png" alt="" srcset="">
                 </div>
                 <div class="space-x-2 bg-[#F5FFF6] px-4 py-2 rounded-full flex items-center ml-3">
@@ -58,7 +58,7 @@
                     <h3 class="font-semibold text-lg">National Emergency Number</h3>
                     <p class="text-gray-500 text-sm">National Emergency</p>
                   </div>
-                  <i class="fa-regular fa-heart"></i>
+                  <i onclick="favoriteCount()" class="fa-regular fa-heart "></i>
                 </div>
                   <p class="text-2xl font-bold mt-2">999</p>
                   <p class="space-x-2 bg-[#F2F2F2] px-4 py-2 rounded-full w-[50px] text-xs">All</p>
@@ -79,7 +79,7 @@
                     <h3 class="font-semibold text-lg">Police Helpline Number</h3>
                     <p class="text-gray-500 text-sm">Police</p>
                   </div>
-                  <i class="fa-regular fa-heart"></i>
+                  <i onclick="favoriteCount()" class="fa-regular fa-heart"></i>
                 </div>
                 <p class="text-2xl font-bold mt-2">999</p>
                 <p class="space-x-2 bg-[#F2F2F2] px-4 py-2 rounded-full w-[60px] text-xs">Police</p>
@@ -99,7 +99,7 @@
                     <h3 class="font-semibold text-lg">Fire Service Number</h3>
                     <p class="text-gray-500 text-sm">Fire Service</p>
                   </div>
-                  <i class="fa-regular fa-heart"></i>
+                  <i onclick="favoriteCount()" class="fa-regular fa-heart"></i>
                 </div>
                 <p class="text-2xl font-bold mt-2">999</p>
                 <p class="space-x-2 bg-[#F2F2F2] px-4 py-2 rounded-full w-[50px] text-xs">Fire</p>
@@ -130,7 +130,7 @@
                     <h3 class="font-semibold text-lg">Ambulance Service</h3>
                     <p class="text-gray-500 text-sm">Ambulance</p>
                   </div>
-                  <i class="fa-regular fa-heart"></i>
+                  <i onclick="favoriteCount()" class="fa-regular fa-heart"></i>
                 </div>
                 <p class="text-2xl font-bold mt-2">1994-999999</p>
                 <p class="space-x-2 bg-[#F2F2F2] px-4 py-2 rounded-full w-[70px] text-xs">Health</p>
@@ -150,7 +150,7 @@
                     <h3 class="font-semibold text-lg">Women & Child Helpline</h3>
                     <p class="text-gray-500 text-sm">Women & Child Helpline</p>
                   </div>
-                  <i class="fa-regular fa-heart"></i>
+                  <i onclick="favoriteCount()" class="fa-regular fa-heart"></i>
                 </div>
                 <p class="text-2xl font-bold mt-2">109</p>
                 <p class="space-x-2 bg-[#F2F2F2] px-4 py-2 rounded-full w-[50px] text-xs">help</p>
@@ -170,13 +170,13 @@
                     <h3 class="font-semibold text-lg">Anti-Corruption Helpline</h3>
                     <p class="text-gray-500 text-sm">Anti-Corruption</p>
                   </div>
-                  <i class="fa-regular fa-heart"></i>
+                  <i onclick="favoriteCount()" class="fa-regular fa-heart"></i>
                 </div>
                 <p class="text-2xl font-bold mt-2">106</p>
                 <p class="space-x-2 bg-[#F2F2F2] px-4 py-2 rounded-full w-[50px] text-xs">Govt.</p>
                 <div class="flex gap-2 mt-4">
                   <button class="flex-1 border rounded-lg py-1"><i class="fa-regular fa-copy"></i> Copy</button>
-                  <button onclick="callNumber('National Emergency Number','999')" class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
+                  <button class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
               </div>
             </div>
@@ -190,7 +190,7 @@
                     <h3 class="font-semibold text-lg">Electricity Helpline</h3>
                     <p class="text-gray-500 text-sm">Electricity Outage</p>
                   </div>
-                  <i class="fa-regular fa-heart"></i>
+                  <i onclick="favoriteCount()" class="fa-regular fa-heart"></i>
                 </div>
                 <p class="text-2xl font-bold mt-2">16216</p>
                 <p class="space-x-2 bg-[#F2F2F2] px-4 py-2 rounded-full w-[90px] text-xs">Emergency</p>
@@ -210,7 +210,7 @@
                     <h3 class="font-semibold text-lg">Brac Helpline</h3>
                     <p class="text-gray-500 text-sm">Brac</p>
                   </div>
-                  <i class="fa-regular fa-heart"></i>
+                  <i onclick="favoriteCount()" class="fa-regular fa-heart"></i>
                 </div>
                 <p class="text-2xl font-bold mt-2">16445</p>
                 <p class="space-x-2 bg-[#F2F2F2] px-4 py-2 rounded-full w-[50px] text-xs">NGO</p>
@@ -230,7 +230,7 @@
                     <h3 class="font-semibold text-lg">Bangladesh Railway Helpline </h3>
                     <p class="text-gray-500 text-sm">Bangladesh Railway</p>
                   </div>
-                  <i class="fa-regular fa-heart"></i>
+                  <i onclick="favoriteCount()" class="fa-regular fa-heart"></i>
                 </div>
                 <p class="text-2xl font-bold mt-2">163</p>
                 <p class="space-x-2 bg-[#F2F2F2] px-4 py-2 rounded-full w-[60px] text-xs">Travel</p>
