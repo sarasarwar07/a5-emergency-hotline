@@ -1,4 +1,7 @@
 // console.log('connected js file')
+
+const callData=[]
+
 // favorite counter
 
 function favoriteCount() {
@@ -7,6 +10,7 @@ function favoriteCount() {
       currentFavoriteCounter++;
       favoriteCounter.textContent = currentFavoriteCounter;
     }
+// copy counter
 
 function copyCount(){
     const copyCounter= document.getElementById('copy-count')
@@ -14,6 +18,8 @@ function copyCount(){
     currentCopyCounter++
     copyCounter.textContent= currentCopyCounter
 }
+
+// copy text function
 
 function copyServiceNumber(id){
     const copyText= document.getElementById(id).innerText
@@ -30,6 +36,26 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
     copyServiceNumber(targetId);
   });
 });
+
+// calling feature
+
+function callButton(serviceId1, serviceId2) {
+  const coinCounterEl = document.getElementById('coin-count')
+  let currentCoin = parseInt(coinCounterEl.innerText);         
+
+  const serviceName = document.getElementById(serviceId1).innerText
+  const number = document.getElementById(serviceId2).innerText
+
+  if (currentCoin >= 20) {
+    currentCoin -= 20
+    coinCounterEl.innerText = currentCoin; 
+    alert(`Calling...  ${serviceName} (${number})`)
+  } else {
+    alert("No sufficient balance");
+  }
+  
+}
+  
 
 
 

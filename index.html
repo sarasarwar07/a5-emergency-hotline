@@ -26,7 +26,7 @@
                     <img class="w-[30px] h-[30px] ml-3" src="./assets/heart.png" alt="" srcset="">
                 </div>
                 <div class="space-x-2 bg-[#F5FFF6] px-4 py-2 rounded-full flex items-center ml-3">
-                    <h2>100</h2>
+                    <h2 id="coin-count">100</h2>
                     <img class="w-[30px] h-[30px] ml-3 " src="./assets/coin.png" alt="" srcset="">
                 </div>
                 <div>
@@ -49,13 +49,13 @@
     <main class="">
         <!-- Cards -->
         <div class="container grid grid-cols-1 md:grid-cols-4 gap-8 mt-10 ml-25 justify-center">
-            <div class="box-1">
+            <div class="box">
       
               <div class="bg-white shadow rounded-2xl p-4 flex flex-col justify-between">
                 <div class="flex justify-between items-start">
                   <div>
                     <img class="w-[30px] h-[30px] mb-3" src="./assets/emergency.png" alt="" srcset="">
-                    <h3 class="font-semibold text-lg">National Emergency Number</h3>
+                    <h3 id="service-name1" class="font-semibold text-lg ">National Emergency Number</h3>
                     <p class="text-gray-500 text-sm">National Emergency</p>
                   </div>
                   <i onclick="favoriteCount()" class="fa-regular fa-heart "></i>
@@ -64,57 +64,58 @@
                   <p class="space-x-2 bg-[#F2F2F2] px-4 py-2 rounded-full w-[50px] text-xs">All</p>
                 <div class="flex gap-2 mt-4">
                   <button onclick="copyCount()" class="flex-1 border rounded-lg py-1 copy-btn" data-target="service-num"><i class="fa-regular fa-copy"></i> Copy</button>
-                  <button class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
+                  <button onclick="callButton('service-name1','service-num')" class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
               </div>
 
             </div>
 
 
-            <div class="box-2">
+            <div class="box">
               <div class="bg-white shadow rounded-2xl p-4 flex flex-col justify-between">
                 <div class="flex justify-between items-start">
                   <div>
                     <img class="w-[30px] h-[30px] mb-3" src="./assets/police.png" alt="" srcset="">
-                    <h3 class="font-semibold text-lg">Police Helpline Number</h3>
+                    <h3 id="service-name2" class="font-semibold text-lg">Police Helpline Number</h3>
                     <p class="text-gray-500 text-sm">Police</p>
                   </div>
                   <i onclick="favoriteCount()" class="fa-regular fa-heart"></i>
                 </div>
-                <p id="plice-num" class="text-2xl font-bold mt-2">999</p>
+                <p id="police-num" class="text-2xl font-bold mt-2">999</p>
                 <p class="space-x-2 bg-[#F2F2F2] px-4 py-2 rounded-full w-[60px] text-xs">Police</p>
                 <div class="flex gap-2 mt-4">
                   <button onclick="copyCount()" class="flex-1 border rounded-lg py-1 copy-btn" data-target="plice-num"><i class="fa-regular fa-copy"></i> Copy</button>
-                  <button class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
+                  <button onclick="callButton('service-name2','police-num')" class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
               </div>
             </div>
 
 
-            <div class="box-3">
+            <div class="box">
               <div class="bg-white shadow rounded-2xl p-4 flex flex-col justify-between">
                 <div class="flex justify-between items-start">
                   <div>
                     <img class="w-[30px] h-[30px] mb-3" src="./assets/fire-service.png" alt="" srcset="">
-                    <h3 class="font-semibold text-lg">Fire Service Number</h3>
+                    <h3 id="service-name3" class="font-semibold text-lg">Fire Service Number</h3>
                     <p class="text-gray-500 text-sm">Fire Service</p>
                   </div>
                   <i onclick="favoriteCount()" class="fa-regular fa-heart"></i>
                 </div>
-                <p id="fire-num" class="text-2xl font-bold mt-2">999</p>
+                <p id="fire-num" class="text-2xl font-bold mt-2 ">999</p>
                 <p class="space-x-2 bg-[#F2F2F2] px-4 py-2 rounded-full w-[50px] text-xs">Fire</p>
                 <div class="flex gap-2 mt-4">
                   <button onclick="copyCount()" class="flex-1 border rounded-lg py-1 copy-btn" data-target="fire-num"><i class="fa-regular fa-copy"></i> Copy</button>
-                  <button class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
+                  <button onclick="callButton('service-name3','fire-num')"  class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
               </div>
             </div>
 
 
-            <div class="box-4 row-span-3">
+            <div  class="box-4 row-span-3">
               <div class="bg-white shadow rounded-2xl p-4 h-[107.5vh]">
                 <div class="flex justify-between items-center mb-4">
                   <h3 class="font-bold"><i class="fa-regular fa-clock"></i> Call History</h3>
+                  
                   <button class="btn ml-3 bg-[#00A63E] text-white px-5 py-1 rounded-3xl">Clear</button>
                 </div>
                 
@@ -127,7 +128,7 @@
                 <div class="flex justify-between items-start">
                   <div>
                     <img class="w-[30px] h-[30px] mb-3" src="./assets/ambulance.png" alt="" srcset="">
-                    <h3 class="font-semibold text-lg">Ambulance Service</h3>
+                    <h3 id="service-name4" class="font-semibold text-lg">Ambulance Service</h3>
                     <p class="text-gray-500 text-sm">Ambulance</p>
                   </div>
                   <i onclick="favoriteCount()" class="fa-regular fa-heart"></i>
@@ -136,7 +137,7 @@
                 <p class="space-x-2 bg-[#F2F2F2] px-4 py-2 rounded-full w-[70px] text-xs">Health</p>
                 <div class="flex gap-2 mt-4">
                   <button onclick="copyCount()" class="flex-1 border rounded-lg py-1 copy-btn" data-target="health-num"><i class="fa-regular fa-copy"></i> Copy</button>
-                  <button class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
+                  <button onclick="callButton('service-name4','health-num')" class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
               </div>
             </div>
@@ -147,7 +148,7 @@
                 <div class="flex justify-between items-start">
                   <div>
                     <img class="w-[30px] h-[30px] mb-3" src="./assets/emergency.png" alt="" srcset="">
-                    <h3 class="font-semibold text-lg">Women & Child Helpline</h3>
+                    <h3 id="service-name5" class="font-semibold text-lg">Women & Child Helpline</h3>
                     <p class="text-gray-500 text-sm">Women & Child Helpline</p>
                   </div>
                   <i onclick="favoriteCount()" class="fa-regular fa-heart"></i>
@@ -156,7 +157,7 @@
                 <p class="space-x-2 bg-[#F2F2F2] px-4 py-2 rounded-full w-[50px] text-xs">help</p>
                 <div class="flex gap-2 mt-4">
                   <button onclick="copyCount()" class="flex-1 border rounded-lg py-1 copy-btn" data-target="help-num"><i class="fa-regular fa-copy"></i> Copy</button>
-                  <button class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
+                  <button onclick="callButton('service-name5','help-num')" class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
               </div>
             </div>
@@ -167,7 +168,7 @@
                 <div class="flex justify-between items-start">
                   <div>
                     <img class="w-[30px] h-[30px] mb-3" src="./assets/emergency.png" alt="" srcset="">
-                    <h3 class="font-semibold text-lg">Anti-Corruption Helpline</h3>
+                    <h3 id="service-name6" class="font-semibold text-lg">Anti-Corruption Helpline</h3>
                     <p class="text-gray-500 text-sm">Anti-Corruption</p>
                   </div>
                   <i onclick="favoriteCount()" class="fa-regular fa-heart"></i>
@@ -176,7 +177,7 @@
                 <p class="space-x-2 bg-[#F2F2F2] px-4 py-2 rounded-full w-[50px] text-xs">Govt.</p>
                 <div class="flex gap-2 mt-4">
                   <button onclick="copyCount()" class="flex-1 border rounded-lg py-1 copy-btn" data-target="govt-num"><i class="fa-regular fa-copy"></i> Copy</button>
-                  <button class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
+                  <button onclick="callButton('service-name6','govt-num')" class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
               </div>
             </div>
@@ -187,7 +188,7 @@
                 <div class="flex justify-between items-start">
                   <div>
                     <img class="w-[30px] h-[30px] mb-3" src="./assets/emergency.png" alt="" srcset="">
-                    <h3 class="font-semibold text-lg">Electricity Helpline</h3>
+                    <h3 id="service-name7" class="font-semibold text-lg">Electricity Helpline</h3>
                     <p class="text-gray-500 text-sm">Electricity Outage</p>
                   </div>
                   <i onclick="favoriteCount()" class="fa-regular fa-heart"></i>
@@ -196,7 +197,7 @@
                 <p class="space-x-2 bg-[#F2F2F2] px-4 py-2 rounded-full w-[90px] text-xs">Emergency</p>
                 <div class="flex gap-2 mt-4">
                   <button onclick="copyCount()" class="flex-1 border rounded-lg py-1 copy-btn" data-target="electricity-num"><i class="fa-regular fa-copy"></i> Copy</button>
-                  <button class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
+                  <button onclick="callButton('service-name7','electricity-num')" class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
                </div>
               </div>
             </div>
@@ -207,7 +208,7 @@
                 <div class="flex justify-between items-start">
                   <div>
                     <img class="w-[30px] h-[30px] mb-3" src="./assets/emergency.png" alt="" srcset="">
-                    <h3 class="font-semibold text-lg">Brac Helpline</h3>
+                    <h3 id="service-name8" class="font-semibold text-lg">Brac Helpline</h3>
                     <p class="text-gray-500 text-sm">Brac</p>
                   </div>
                   <i onclick="favoriteCount()" class="fa-regular fa-heart"></i>
@@ -216,7 +217,7 @@
                 <p class="space-x-2 bg-[#F2F2F2] px-4 py-2 rounded-full w-[50px] text-xs">NGO</p>
                 <div class="flex gap-2 mt-4">
                   <button onclick="copyCount()" class="flex-1 border rounded-lg py-1 copy-btn" data-target="ngo-num"><i class="fa-regular fa-copy"></i> Copy</button>
-                  <button class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
+                  <button onclick="callButton('service-name8','ngo-num')" class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
               </div>
             </div>
@@ -227,7 +228,7 @@
                 <div class="flex justify-between items-start">
                   <div>
                     <img class="w-[30px] h-[30px] mb-3" src="./assets/emergency.png" alt="" srcset="">
-                    <h3 class="font-semibold text-lg">Bangladesh Railway Helpline </h3>
+                    <h3 id="service-name9" class="font-semibold text-lg">Bangladesh Railway Helpline </h3>
                     <p class="text-gray-500 text-sm">Bangladesh Railway</p>
                   </div>
                   <i onclick="favoriteCount()" class="fa-regular fa-heart"></i>
@@ -236,7 +237,7 @@
                 <p class="space-x-2 bg-[#F2F2F2] px-4 py-2 rounded-full w-[60px] text-xs">Travel</p>
                 <div class="flex gap-2 mt-4">
                   <button onclick="copyCount()" class="flex-1 border rounded-lg py-1 copy-btn" data-target="railway-num"><i class="fa-regular fa-copy"></i> Copy</button>
-                  <button class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
+                  <button onclick="callButton('service-name9','railway-num')" class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
               </div>
             </div>
