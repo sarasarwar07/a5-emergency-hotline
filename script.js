@@ -5,10 +5,10 @@ const callData=[]
 // favorite counter
 
 function favoriteCount() {
-      const favoriteCounter = document.getElementById('fav-count');
-      let currentFavoriteCounter = parseInt(favoriteCounter.textContent);
+      const favoriteCounter = document.getElementById('fav-count')
+      let currentFavoriteCounter = parseInt(favoriteCounter.textContent)
       currentFavoriteCounter++;
-      favoriteCounter.textContent = currentFavoriteCounter;
+      favoriteCounter.textContent = currentFavoriteCounter
     }
 // copy counter
 
@@ -50,9 +50,39 @@ function callButton(serviceId1, serviceId2) {
     currentCoin -= 20
     coinCounterEl.innerText = currentCoin; 
     alert(`Calling...  ${serviceName} (${number})`)
+
+  // call history
+
+    const data= {
+    dataName: serviceName,
+    dataNumber: number,
+    date:new Date().toLocaleTimeString()
+
+  }
+  callData.push(data)
+  // console.log(callData)
+
+  const callHistoryData= document.getElementById('call-history-data')
+
+    const div= document.createElement('div')
+    div.innerHTML=`
+    <div class="flex justify-between items-center bg-[#F2F2F2] rounded-xl p-1 mt-3">
+      <div>
+        <h1>${data.dataName}</h1>
+        <p>${data.dataNumber}</p>
+      </div>
+      <div>
+        <h1>${data.date}</h1>
+      </div>
+    </div>
+    `
+    callHistoryData.appendChild(div)
+
   } else {
     alert("No sufficient balance");
   }
+
+  
   
 }
   
