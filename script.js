@@ -49,7 +49,7 @@ function callButton(serviceId1, serviceId2) {
   if (currentCoin >= 20) {
     currentCoin -= 20
     coinCounterEl.innerText = currentCoin; 
-    alert(`Calling...  ${serviceName} (${number})`)
+    alert(`Calling ${serviceName} (${number})...`)
 
   // call history
 
@@ -79,15 +79,17 @@ function callButton(serviceId1, serviceId2) {
     callHistoryData.appendChild(div)
 
   } else {
-    alert("No sufficient balance");
+    alert("No sufficient balance")
   }
 
-  
-  
+   
 }
   
+// clear Feature
 
-
+function clearCallHistory() {
+      document.getElementById('call-history-data').innerHTML = ""
+}
 
 
 

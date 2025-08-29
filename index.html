@@ -63,8 +63,8 @@
                   <p id="service-num" class="text-2xl font-bold mt-2">999</p>
                   <p class="space-x-2 bg-[#F2F2F2] px-4 py-2 rounded-full w-[50px] text-xs">All</p>
                 <div class="flex gap-2 mt-4">
-                  <button onclick="copyCount()" class="flex-1 border rounded-lg py-1 copy-btn" data-target="service-num"><i class="fa-regular fa-copy"></i> Copy</button>
-                  <button onclick="callButton('service-name1','service-num')" class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
+                  <button onclick="copyCount()" class="flex-1 border rounded-lg py-1 copy-btn hover:bg-gray-700 hover:text-white" data-target="service-num"><i class="fa-regular fa-copy"></i> Copy</button>
+                  <button onclick="callButton('service-name1','service-num')" class="flex-1 bg-[#00A63E] text-white rounded-lg py-1 hover:bg-gray-400 hover:text-white"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
               </div>
 
@@ -84,8 +84,8 @@
                 <p id="police-num" class="text-2xl font-bold mt-2">999</p>
                 <p class="space-x-2 bg-[#F2F2F2] px-4 py-2 rounded-full w-[60px] text-xs">Police</p>
                 <div class="flex gap-2 mt-4">
-                  <button onclick="copyCount()" class="flex-1 border rounded-lg py-1 copy-btn" data-target="plice-num"><i class="fa-regular fa-copy"></i> Copy</button>
-                  <button onclick="callButton('service-name2','police-num')" class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
+                  <button onclick="copyCount()" class="flex-1 border rounded-lg py-1 copy-btn hover:bg-gray-700 hover:text-white" data-target="plice-num"><i class="fa-regular fa-copy"></i> Copy</button>
+                  <button onclick="callButton('service-name2','police-num')" class="flex-1 bg-[#00A63E] text-white rounded-lg py-1 hover:bg-gray-400 hover:text-white"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
               </div>
             </div>
@@ -104,8 +104,8 @@
                 <p id="fire-num" class="text-2xl font-bold mt-2 ">999</p>
                 <p class="space-x-2 bg-[#F2F2F2] px-4 py-2 rounded-full w-[50px] text-xs">Fire</p>
                 <div class="flex gap-2 mt-4">
-                  <button onclick="copyCount()" class="flex-1 border rounded-lg py-1 copy-btn" data-target="fire-num"><i class="fa-regular fa-copy"></i> Copy</button>
-                  <button onclick="callButton('service-name3','fire-num')"  class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
+                  <button onclick="copyCount()" class="flex-1 border rounded-lg py-1 copy-btn hover:bg-gray-700 hover:text-white" data-target="fire-num"><i class="fa-regular fa-copy"></i> Copy</button>
+                  <button onclick="callButton('service-name3','fire-num')"  class="flex-1 bg-[#00A63E] text-white rounded-lg py-1 hover:bg-gray-400 hover:text-white"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
               </div>
             </div>
@@ -116,7 +116,7 @@
                 <div class="flex justify-between items-center mb-4">
                   <h3 class="font-bold"><i class="fa-regular fa-clock"></i> Call History</h3>
                   
-                  <button class="btn ml-3 bg-[#00A63E] text-white px-5 py-1 rounded-3xl">Clear</button>
+                  <button onclick="clearCallHistory()" class="btn ml-3 bg-[#00A63E] text-white px-5 py-1 rounded-3xl hover:bg-gray-400 hover:text-white">Clear</button>
                 </div>
                 <div id="call-history-data">
                   
@@ -139,8 +139,8 @@
                 <p id="health-num" class="text-2xl font-bold mt-2">1994-999999</p>
                 <p class="space-x-2 bg-[#F2F2F2] px-4 py-2 rounded-full w-[70px] text-xs">Health</p>
                 <div class="flex gap-2 mt-4">
-                  <button onclick="copyCount()" class="flex-1 border rounded-lg py-1 copy-btn" data-target="health-num"><i class="fa-regular fa-copy"></i> Copy</button>
-                  <button onclick="callButton('service-name4','health-num')" class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
+                  <button onclick="copyCount()" class="flex-1 border rounded-lg py-1 copy-btn hover:bg-gray-700 hover:text-white" data-target="health-num"><i class="fa-regular fa-copy"></i> Copy</button>
+                  <button onclick="callButton('service-name4','health-num')" class="flex-1 bg-[#00A63E] text-white rounded-lg py-1 hover:bg-gray-400 hover:text-white"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
               </div>
             </div>
@@ -159,8 +159,8 @@
                 <p id="help-num" class="text-2xl font-bold mt-2">109</p>
                 <p class="space-x-2 bg-[#F2F2F2] px-4 py-2 rounded-full w-[50px] text-xs">help</p>
                 <div class="flex gap-2 mt-4">
-                  <button onclick="copyCount()" class="flex-1 border rounded-lg py-1 copy-btn" data-target="help-num"><i class="fa-regular fa-copy"></i> Copy</button>
-                  <button onclick="callButton('service-name5','help-num')" class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
+                  <button onclick="copyCount()" class="flex-1 border rounded-lg py-1 copy-btn hover:bg-gray-700 hover:text-white" data-target="help-num"><i class="fa-regular fa-copy"></i> Copy</button>
+                  <button onclick="callButton('service-name5','help-num')" class="flex-1 bg-[#00A63E] text-white rounded-lg py-1 hover:bg-gray-400 hover:text-white"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
               </div>
             </div>
@@ -179,8 +179,8 @@
                 <p id="govt-num" class="text-2xl font-bold mt-2">106</p>
                 <p class="space-x-2 bg-[#F2F2F2] px-4 py-2 rounded-full w-[50px] text-xs">Govt.</p>
                 <div class="flex gap-2 mt-4">
-                  <button onclick="copyCount()" class="flex-1 border rounded-lg py-1 copy-btn" data-target="govt-num"><i class="fa-regular fa-copy"></i> Copy</button>
-                  <button onclick="callButton('service-name6','govt-num')" class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
+                  <button onclick="copyCount()" class="flex-1 border rounded-lg py-1 copy-btn hover:bg-gray-700 hover:text-white" data-target="govt-num"><i class="fa-regular fa-copy"></i> Copy</button>
+                  <button onclick="callButton('service-name6','govt-num')" class="flex-1 bg-[#00A63E] text-white rounded-lg py-1 hover:bg-gray-400 hover:text-white"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
               </div>
             </div>
@@ -199,8 +199,8 @@
                 <p id="electricity-num" class="text-2xl font-bold mt-2">16216</p>
                 <p class="space-x-2 bg-[#F2F2F2] px-4 py-2 rounded-full w-[90px] text-xs">Emergency</p>
                 <div class="flex gap-2 mt-4">
-                  <button onclick="copyCount()" class="flex-1 border rounded-lg py-1 copy-btn" data-target="electricity-num"><i class="fa-regular fa-copy"></i> Copy</button>
-                  <button onclick="callButton('service-name7','electricity-num')" class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
+                  <button onclick="copyCount()" class="flex-1 border rounded-lg py-1 copy-btn hover:bg-gray-700 hover:text-white" data-target="electricity-num"><i class="fa-regular fa-copy"></i> Copy</button>
+                  <button onclick="callButton('service-name7','electricity-num')" class="flex-1 bg-[#00A63E] text-white rounded-lg py-1 hover:bg-gray-400 hover:text-white"><i class="fa-solid fa-phone"></i> Call</button>
                </div>
               </div>
             </div>
@@ -219,8 +219,8 @@
                 <p id="ngo-num" class="text-2xl font-bold mt-2">16445</p>
                 <p class="space-x-2 bg-[#F2F2F2] px-4 py-2 rounded-full w-[50px] text-xs">NGO</p>
                 <div class="flex gap-2 mt-4">
-                  <button onclick="copyCount()" class="flex-1 border rounded-lg py-1 copy-btn" data-target="ngo-num"><i class="fa-regular fa-copy"></i> Copy</button>
-                  <button onclick="callButton('service-name8','ngo-num')" class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
+                  <button onclick="copyCount()" class="flex-1 border rounded-lg py-1 copy-btn hover:bg-gray-700 hover:text-white" data-target="ngo-num"><i class="fa-regular fa-copy"></i> Copy</button>
+                  <button onclick="callButton('service-name8','ngo-num')" class="flex-1 bg-[#00A63E] text-white rounded-lg py-1 hover:bg-gray-400 hover:text-white"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
               </div>
             </div>
@@ -239,8 +239,8 @@
                 <p id="railway-num" class="text-2xl font-bold mt-2">163</p>
                 <p class="space-x-2 bg-[#F2F2F2] px-4 py-2 rounded-full w-[60px] text-xs">Travel</p>
                 <div class="flex gap-2 mt-4">
-                  <button onclick="copyCount()" class="flex-1 border rounded-lg py-1 copy-btn" data-target="railway-num"><i class="fa-regular fa-copy"></i> Copy</button>
-                  <button onclick="callButton('service-name9','railway-num')" class="flex-1 bg-[#00A63E] text-white rounded-lg py-1"><i class="fa-solid fa-phone"></i> Call</button>
+                  <button onclick="copyCount()" class="flex-1 border rounded-lg py-1 copy-btn hover:bg-gray-700 hover:text-white" data-target="railway-num"><i class="fa-regular fa-copy"></i> Copy</button>
+                  <button onclick="callButton('service-name9','railway-num')" class="flex-1 bg-[#00A63E] text-white rounded-lg py-1 hover:bg-gray-400 hover:text-white"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
               </div>
             </div>
